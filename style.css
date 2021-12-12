@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Primary color */
+    --body-color: hsl(225, 100%, 94%);
+    --blue-alt: hsl(245, 75%, 52%);
+    /* Neutral Color */
+    --pale-blue: hsl(225, 100%, 98%);
+    --desaturated-blue: hsl(224, 23%, 55%);
+    --dark-blue: hsl(223, 47%, 23%);
+}
+
+body {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: no-repeat url(./images/pattern-background-desktop.svg);
+    background-color: var(--body-color);
+    text-align: center;
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+p {
+    font-size: 16px;
+}
+
+/* Card */
+.card {
+    width: 400px;
+    background-color: var(--pale-blue);
+    border-radius: 0.5rem;
+    box-shadow:
+        12.5px 12.5px 10px rgba(0, 0, 0, 0.035),
+        100px 100px 80px rgba(0, 0, 0, 0.07);
+    padding-bottom: 1rem;
+}
+
+.card__hero img {
+    width: 100%;
+    border-radius: 0.5rem 0.5rem 0 0;
+}
+
+/*  Body card */
+.card__body {
+    width: 80%;
+    display: grid;
+    gap: 1.5rem;
+    margin: 2rem auto 0;
+}
+
+.card__body-description {
+    color: var(--desaturated-blue);
+}
+
+/* Price */
+.card__body-price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--body-color);
+    padding: 15px;
+    border-radius: 0.5rem;
+}
+
+.card__body-price div:first-child {
+    display: flex;
+    gap: 1rem;
+}
+
+
+.card__body-price p {
+    color: var(--desaturated-blue);
+}
+
+.card__body-price a {
+    color: var(--blue-alt);
+    transition: 0.3s;
+}
+
+.card__body-price a:hover {
+    text-decoration: none;
+}
+
+/* Button */
+#button {
+    background: var(--blue-alt);
+    border-radius: 0.5rem;
+    text-decoration: none;
+    color: var(--pale-blue);
+    margin-top: 0.8rem;
+    padding: 1rem;
+    box-shadow: 5px 10px 11px rgba(0, 0, 0, 0.07);
+    transition: 0.3s;
+}
+
+#button:hover {
+    opacity: 0.7;
+}
+
+#cancel {
+    text-decoration: none;
+    font-weight: 700;
+    color: var(--desaturated-blue);
+    transition: 0.3s;
+}
+
+#cancel:hover {
+    color: black;
+}
+
+/* Footer */
+footer {
+    position: absolute;
+    width: 100vw;
+    text-align: center;
+    bottom: 10px;
+}
+
+
+footer a {
+    text-decoration: none;
+}
+
+
+/* Media Queries */
+@media screen and (max-width: 375px) {
+    body {
+        background: no-repeat url(./images/pattern-background-mobile.svg);
+    }
+
+    .card {
+        width: 90%;
+    }
+}
